@@ -1,0 +1,17 @@
+h1 {
+  text-align: center;
+}
+
+.lorem {
+  color: blue;
+}
+.view {
+  background-color: rgba(135, 198, 127, 0.823);
+  color: black;
+  font-weight: 100;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  border-color: #000000;
+  display: block;
+  margin: auto;
+}
