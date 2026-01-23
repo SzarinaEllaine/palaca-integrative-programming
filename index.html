@@ -1,19 +1,117 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AKI</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Monellaine Pâtisserie</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>
-      Homemade Baked <br />
-      Goods and Pastries
-    </h1>
-    <p class="description">
-      Welcome to Monellaine pâtisserie, where <br />every baked goods and
-      pastries are made with love.
-    </p>
+    <header class="site-header">
+      <a class="logo-link" href="/" aria-label="Monellaine Pâtisserie home">
+        <img src="monellaine.png" alt="Monellaine logo" class="site-logo" />
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-inner">
+          <h1 class="brand">Monellaine Pâtisserie</h1>
+          <p class="hero-sub">
+            Handmade pastries &amp; baked goods — made with love every day.
+          </p>
+          <div class="hero-ctas">
+            <a href="#menu" class="btn btn-primary">Order Now</a>
+            <a href="#about" class="btn btn-ghost">Read More</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="panel about">
+        <div class="container">
+          <h2>About</h2>
+          <p>
+            Monellaine is a small-batch patisserie specializing in classic
+            recipes with a modern touch. We use seasonal ingredients, careful
+            techniques, and lots of love.
+          </p>
+        </div>
+      </section>
+
+      <section id="menu" class="panel menu">
+        <div class="container">
+          <div class="panel-header">
+            <h2>Menu Highlights</h2>
+            <p class="muted">A few favorites — fresh daily.</p>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <img src="buttercroissant.png" alt="Croissant" class="card-img" />
+              <h3>Butter Croissant</h3>
+              <p class="muted">
+                Flaky, layered, and baked to golden perfection.
+              </p>
+              <div class="card-foot">
+                <span class="price">₱150</span>
+                <a class="btn-sm" href="#menu">Order</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <img src="tart.jpg" alt="Tart" class="card-img" />
+              <h3>Fruit Tart</h3>
+              <p class="muted">Bright curd in a tender pastry shell.</p>
+              <div class="card-foot">
+                <span class="price">₱275</span>
+                <a class="btn-sm" href="#menu">Order</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <img
+                src="almond financiers.jpg"
+                alt="Cake slice"
+                class="card-img"
+              />
+              <h3>Almond Financier</h3>
+              <p class="muted">Buttery almond cake, lightly caramelized.</p>
+              <div class="card-foot">
+                <span class="price">₱150</span>
+                <a class="btn-sm" href="#menu">Order</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="container footer-grid">
+          <div>
+            <strong>Monellaine Pâtisserie</strong>
+            <p class="muted">Fresh pastries — local pickup & delivery</p>
+          </div>
+          <div class="footer-actions">
+            <a href="#menu" class="btn btn-primary">Order Now</a>
+            <a href="#about" class="btn btn-ghost">Contact</a>
+          </div>
+        </div>
+      </footer>
+    </main>
   </body>
 </html>
