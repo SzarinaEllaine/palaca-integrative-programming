@@ -1,6 +1,7 @@
 # ACTVITY 1 January 21,2026 (Landing Page)
 
 🔹Activity Name : Landing Page Project
+
 🔹 Project Name : Monellaine Pâtisserie
 
 🔹 Project Description: The landing page is all about a bakery. I created this because my sister and I owns a small business called "Monellaine Pâtisserie" where we sell our baked producsts. Because we don't own a building yet, we rely more on social media to promote our small business. So I decided, to make a landing page to help promote more of our business.
@@ -28,7 +29,7 @@ I used chatgpt to generate and give advices on some areas I don't and lack knowl
 
 I learned a lot in this activity, I finally have an idea how to create a landing page and I am excited to create more projects in the future. The most challenging part for me is to arrange and adjust the format of the wordings.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 # ACTIVITY 2 January 26, 2026 (Login and Signup page linking)
 
@@ -60,4 +61,4 @@ all code was reviewed and modified by me.
 🔹 Learning Reflection (Short) Answer briefly: What did you learn from this activity? What was the most challenging part? (2–3 sentences)
 In this activity, I've learned how to create login and signup pages. Though I had a really hard time pushing my work to github due to some unexpected errors, I stll managed to overcome it.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
