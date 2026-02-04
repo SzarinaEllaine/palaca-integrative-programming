@@ -51,6 +51,8 @@ I learned a lot in this activity, I finally have an idea how to create a landing
 1. Responsive Layout
 2. Navigation and section-based structure
 3. Product/menu card display
+4. Login
+5. Signup
 
 🔹 AI Assistance Disclosure (Required)
 Answer honestly: Did you use AI tools? (Yes / No)
@@ -62,3 +64,40 @@ all code was reviewed and modified by me.
 In this activity, I've learned how to create login and signup pages. Though I had a really hard time pushing my work to github due to some unexpected errors, I stll managed to overcome it.
 
 ---
+
+#Activity 3 Febuary 4, 2026 (Profile and settings Pages)
+
+🔹 Technologies Used Example:
+
+1. HTML5 - for page structure & content
+2. CSS3 - styling, layout, responsiveness
+3. CSS Variables - theming & maintainability
+4. Flexbox & Grid - Layout system
+5. Google fonts - custom typography
+6. giStatic Images - branding & product visuals
+
+🔹 Navigation Flow:
+
+1. User logs in from `index.html` -> `login.html`.
+2. Successful login leads to `profile.html`.
+3. Dashboard allows navigation to `settings.html`.
+4. Users can return to Profile or Logout to `login.html`.
+
+🔹 Features List at least 3 features of your landing page.
+
+1. Responsive Layout
+2. Navigation and section-based structure
+3. Product/menu card display
+4. Login
+5. Signup
+6. Profile
+7. Settings
+
+🔹 AI Assistance Disclosure (Required)
+Answer honestly: Did you use AI tools? (Yes / No)
+
+Yes, I used ChatGPT to help generate CSS layout ideas and improve wording for the hero section. However,
+all code was reviewed and modified by me.
+
+🔹 Learning Reflection (Short) Answer briefly: What did you learn from this activity? What was the most challenging part? (2–3 sentences)
+In this activity, I've learned how to create profile and settings pages. The most challenging part would be arranging and finding the right design and format of my new page.
