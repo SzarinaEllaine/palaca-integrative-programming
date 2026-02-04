@@ -65,7 +65,7 @@ In this activity, I've learned how to create login and signup pages. Though I ha
 
 ---
 
-#Activity 3 Febuary 4, 2026 (Profile and settings Pages)
+# Activity 3 Febuary 4, 2026 (Profile and settings Pages)
 
 🔹 Technologies Used Example:
 
