@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile – Monellaine</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <a class="logo-link" href="index.html" aria-label="Home">
+        <img src="assets/monellaine.png" class="site-logo" alt="Logo" />
+      </a>
+
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html" style="color: var(--brand)">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="dashboard">
+          <div class="profile-card">
+            <img src="assets/avatar.webp" alt="Szarina Choy" class="avatar" />
+
+            <h2 class="brand" style="font-size: 2rem; margin: 0.5rem 0">
+              Szarina Choy
+            </h2>
+            <p class="muted">szarinagwapa@monellaine.com</p>
+
+            <div class="profile-info">
+              <hr
+                style="
+                  border: 0;
+                  border-top: 1px solid rgba(0, 0, 0, 0.1);
+                  margin: 1rem 0;
+                "
+              />
+              <p
+                class="small"
+                style="text-transform: uppercase; letter-spacing: 1px"
+              >
+                Default Address
+              </p>
+              <p class="muted">
+                Purok 7, Brgy. Sanaol<br />
+                Tagbilaran, Bohol, Philippines
+              </p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3 class="brand">About Me</h3>
+            <p class="muted" style="line-height: 1.6; margin-bottom: 2rem">
+              Enthusiastic pastry lover and loyal customer since 2023. I love
+              the Almond Financiers and order them for every family gathering.
+              Always looking for the perfect fruit tart pairing!
+            </p>
+
+            <h3 class="brand">Account Actions</h3>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap">
+              <a href="settings.html" class="btn btn-primary">Edit Settings</a>
+              <a href="#" class="btn btn-ghost">View Order History</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

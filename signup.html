@@ -2,44 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Sign Up | Monellaine Pâtisserie</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign Up – Monellaine</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="panel">
-      <div class="container auth-box">
-        <h2>Create Account</h2>
-        <p class="muted">Join Monellaine Pâtisserie</p>
+    <header class="site-header">
+      <a class="logo-link" href="index.html">
+        <img src="assets/monellaine.png" class="site-logo" alt="Logo" />
+      </a>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
 
-        <form class="auth-form">
-          <label>
-            Full Name
-            <input type="text" required />
-          </label>
+    <main>
+      <div class="container">
+        <div class="auth-box">
+          <h1>Create Account</h1>
+          <p class="muted">Join our pastry community.</p>
 
-          <label>
-            Email
-            <input type="email" required />
-          </label>
+          <form class="auth-form">
+            <input type="text" placeholder="Full Name" required />
+            <input type="email" placeholder="Email Address" required />
+            <input type="password" placeholder="Password" required />
+            <input type="password" placeholder="Confirm Password" required />
+            
+            <a href="login.html" class="btn btn-primary">Sign Up</a>
+          </form>
 
-          <label>
-            Password
-            <input type="password" required />
-          </label>
-
-          <button type="submit" class="btn btn-primary">Sign Up</button>
-        </form>
-
-        <p class="muted small">
-          Already have an account?
-          <a href="login.html">Login</a>
-        </p>
+          <div class="auth-link">
+            Already have an account? <a href="login.html">Log in</a>
+          </div>
+        </div>
       </div>
     </main>
   </body>

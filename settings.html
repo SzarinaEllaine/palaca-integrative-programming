@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Settings – Monellaine</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <a class="logo-link" href="profile.html">
+        <img src="assets/monellaine.png" class="site-logo" alt="Logo" />
+      </a>
+
+      <nav class="site-nav">
+        <ul>
+          <li><a href="profile.html">Back to Profile</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="panel">
+        <div class="container" style="max-width: 600px">
+          <div class="card" style="padding: 2rem">
+            <div
+              class="panel-header"
+              style="text-align: center; margin-bottom: 2rem"
+            >
+              <h2 class="brand">Account Settings</h2>
+              <p class="muted">Update your preferences and security details.</p>
+            </div>
+
+            <form class="auth-form">
+              <div class="form-group">
+                <label>Change Email</label>
+                <input type="email" placeholder="szarinagwapa@monellaine.com" />
+                <p
+                  class="small muted"
+                  style="font-size: 0.75rem; margin-top: 0.2rem"
+                >
+                  * Synchronized with external identity provider.
+                </p>
+              </div>
+
+              <div class="form-group">
+                <label>Change Address</label>
+                <input type="text" placeholder="Valencia, Bohol, Philippines" />
+                <p
+                  class="small muted"
+                  style="font-size: 0.75rem; margin-top: 0.2rem"
+                >
+                  * Geographic data binding active.
+                </p>
+              </div>
+
+              <div class="form-group">
+                <label>Change Password</label>
+                <input type="password" placeholder="New Password" />
+                <p
+                  class="small muted"
+                  style="font-size: 0.75rem; margin-top: 0.2rem"
+                >
+                  * Argon2id hashing enabled.
+                </p>
+              </div>
+
+              <div class="form-group">
+                <label>Theme Preference</label>
+                <select class="form-select">
+                  <option value="light">Light (Cream & Gold)</option>
+                  <option value="dark">Dark (Coffee & Bronze)</option>
+                </select>
+              </div>
+
+              <div style="margin-top: 1.5rem; text-align: right">
+                <button class="btn btn-primary" type="button">
+                  Save Changes
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
