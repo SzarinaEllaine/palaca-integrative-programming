@@ -54,13 +54,13 @@ I learned a lot in this activity, I finally have an idea how to create a landing
 4. Login
 5. Signup
 
-🔹 AI Assistance Disclosure (Required)
-Answer honestly: Did you use AI tools? (Yes / No)
+🔹 AI Assistance Disclosure
 
 Yes, I used ChatGPT to help generate CSS layout ideas and improve wording for the hero section. However,
 all code was reviewed and modified by me.
 
-🔹 Learning Reflection (Short) Answer briefly: What did you learn from this activity? What was the most challenging part? (2–3 sentences)
+🔹 Learning Reflection
+
 In this activity, I've learned how to create login and signup pages. Though I had a really hard time pushing my work to github due to some unexpected errors, I stll managed to overcome it.
 
 ---
@@ -93,11 +93,11 @@ In this activity, I've learned how to create login and signup pages. Though I ha
 6. Profile
 7. Settings
 
-🔹 AI Assistance Disclosure (Required)
-Answer honestly: Did you use AI tools? (Yes / No)
+🔹 AI Assistance Disclosure
 
 Yes, I used ChatGPT to help generate CSS layout ideas and improve wording for the hero section. However,
 all code was reviewed and modified by me.
 
-🔹 Learning Reflection (Short) Answer briefly: What did you learn from this activity? What was the most challenging part? (2–3 sentences)
+🔹 Learning Reflection
+
 In this activity, I've learned how to create profile and settings pages. The most challenging part would be arranging and finding the right design and format of my new page.
