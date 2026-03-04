@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
+  <script src="script.js"></script>
   <body>
     <header class="site-header">
       <a class="logo-link" href="index.html">
@@ -29,13 +30,24 @@
           <h1>Create Account</h1>
           <p class="muted">Join our pastry community.</p>
 
-          <form class="auth-form">
-            <input type="text" placeholder="Full Name" required />
-            <input type="email" placeholder="Email Address" required />
-            <input type="password" placeholder="Password" required />
-            <input type="password" placeholder="Confirm Password" required />
-            
-            <a href="login.html" class="btn btn-primary">Sign Up</a>
+          <form class="auth-form" id="signupForm">
+            <input type="text" id="fullName" placeholder="Full Name" />
+            <small class="error"></small>
+
+            <input type="email" id="signupEmail" placeholder="Email Address" />
+            <small class="error"></small>
+
+            <input type="password" id="signupPassword" placeholder="Password" />
+            <small class="error"></small>
+
+            <input
+              type="password"
+              id="confirmPassword"
+              placeholder="Confirm Password"
+            />
+            <small class="error"></small>
+
+            <button type="submit" class="btn btn-primary">Sign Up</button>
           </form>
 
           <div class="auth-link">

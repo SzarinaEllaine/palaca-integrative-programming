@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="style.css" />
   </head>
+  <script src="script.js"></script>
   <body>
     <header class="site-header">
       <a class="logo-link" href="/" aria-label="Monellaine Pâtisserie home">
@@ -189,8 +190,12 @@
 
               <div class="footer-col">
                 <h3>Newsletter</h3>
-                <form class="newsletter-form">
-                  <input type="email" placeholder="Email" required />
+                <form class="newsletter-form" id="newsletterForm">
+                  <input
+                    type="email"
+                    id="newsletterEmail"
+                    placeholder="Email"
+                  />
                   <button type="submit" class="btn-sm btn-primary">→</button>
                 </form>
               </div>

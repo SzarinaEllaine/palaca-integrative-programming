@@ -663,3 +663,19 @@ address {
   max-width: var(--container);
   margin: 0 auto;
 }
+/* Error Styling */
+.error {
+  color: #d93025;
+  font-size: 0.8rem;
+  height: 14px;
+  display: block;
+  margin-top: 4px;
+}
+
+input.invalid {
+  border: 1px solid #d93025;
+}
+
+input.valid {
+  border: 1px solid #2e7d32;
+}

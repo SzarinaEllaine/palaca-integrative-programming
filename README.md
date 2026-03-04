@@ -101,3 +101,72 @@ all code was reviewed and modified by me.
 🔹 Learning Reflection
 
 In this activity, I've learned how to create profile and settings pages. The most challenging part would be arranging and finding the right design and format of my new page.
+
+---
+
+# Activity 4 March 4, 2026 (Client-side Validation Rule)
+
+🔹 Technologies Used Example:
+
+1. HTML5 – Page structure and semantic layout
+
+2. CSS3 – Styling, responsive design, glassmorphism UI, animations
+
+3. JavaScript (Vanilla JS) – Client-side form validation and interaction handling
+
+4. Google Fonts – Custom typography (Dancing Script & Inter)
+
+5. Responsive Design (Media Queries) – Mobile and tablet optimization
+
+🔹 Navigation Flow:
+
+1. Landing Page (index.html)
+→ Users can view About section and Menu highlights
+→ Can navigate to Login or Sign Up
+
+2. Sign Up Page (signup.html)
+→ Users create an account (with validation)
+→ Redirects to Login after successful registration
+
+3. Login Page (login.html)
+→ Users enter credentials (validated via JavaScript)
+→ Redirects to Profile page upon successful login
+
+4. Profile Page (profile.html)
+→ Displays user information
+→ Users can access Settings or Logout
+
+5. Settings Page (settings.html)
+→ Users update email, address, password, and theme preference
+→ Validations ensure proper input before saving
+→ Return to Profile
+
+6. Logout
+→ Redirects user back to Login page
+
+🔹 Features List at least 3 features of your landing page.
+
+1. Client-Side Form Validation
+2. Email format validation
+3. Password length enforcement
+4. Confirm password matching
+5. Prevents form submission if invalid
+6. Responsive Modern UI Design
+7. Glassmorphism effects
+8. Smooth hover animations
+9. Fully responsive layout for mobile and desktop
+10. Interactive User Flow
+11. Controlled navigation between Login, Signup, Profile, and Settings
+12. Redirects only when validation succeeds
+13. Dynamic error messages with visual feedback (red/green input borders)
+14. Newsletter Subscription Validation
+15. Email format verification before subscription
+
+🔹 AI Assistance Disclosure
+
+Yes, I used ChatGPT to assist me in areas I lack knowledge of. However,
+all code was reviewed and modified by me.
+
+🔹 Learning Reflection
+
+In this activity, I've learned how to validate using javascript. The most challenging part would be the javascript form validation logic. Because, I must prevent default form submission, validate multiple inputs differently (email, password, confirm password), display error messages dynamically, add/remove CSS classes (valid / invalid), and ensure validation only runs if the form exists.

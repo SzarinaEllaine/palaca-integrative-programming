@@ -11,7 +11,7 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-
+  <script src="script.js"></script>
   <body>
     <header class="site-header">
       <a class="logo-link" href="profile.html">
@@ -37,10 +37,13 @@
               <p class="muted">Update your preferences and security details.</p>
             </div>
 
-            <form class="auth-form">
+            <form class="auth-form" id="settingsForm">
               <div class="form-group">
                 <label>Change Email</label>
-                <input type="email" placeholder="szarinagwapa@monellaine.com" />
+                <input
+                  type="email"
+                  id="settingsEmail"
+                />placeholder="szarinagwapa@monellaine.com" />
                 <p
                   class="small muted"
                   style="font-size: 0.75rem; margin-top: 0.2rem"
@@ -51,7 +54,11 @@
 
               <div class="form-group">
                 <label>Change Address</label>
-                <input type="text" placeholder="Valencia, Bohol, Philippines" />
+                <input
+                  type="text"
+                  id="settingsAddress"
+                  placeholder="Valencia, Bohol, Philippines"
+                />
                 <p
                   class="small muted"
                   style="font-size: 0.75rem; margin-top: 0.2rem"
@@ -62,7 +69,11 @@
 
               <div class="form-group">
                 <label>Change Password</label>
-                <input type="password" placeholder="New Password" />
+                <input
+                  type="password"
+                  id="settingsPassword"
+                  placeholder="New Password"
+                />
                 <p
                   class="small muted"
                   style="font-size: 0.75rem; margin-top: 0.2rem"
@@ -80,7 +91,7 @@
               </div>
 
               <div style="margin-top: 1.5rem; text-align: right">
-                <button class="btn btn-primary" type="button">
+                <button class="btn btn-primary" type="submit">
                   Save Changes
                 </button>
               </div>
