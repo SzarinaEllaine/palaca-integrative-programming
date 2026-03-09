@@ -5,16 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function showError(input, message) {
     const error = input.nextElementSibling;
-    input.classList.add("invalid");
     input.classList.remove("valid");
-    error.textContent = message;
+    input.classList.add("invalid");
+    if (error) error.textContent = message;
   }
 
   function showSuccess(input) {
     const error = input.nextElementSibling;
     input.classList.remove("invalid");
     input.classList.add("valid");
-    error.textContent = "";
+    if (error) error.textContent = "";
   }
 
   function validateEmail(email) {
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* ---------------------------
-     LOGIN VALIDATION
+     LOGIN FORM
   ----------------------------*/
 
   const loginForm = document.getElementById("loginForm");
@@ -34,23 +34,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const email = document.getElementById("loginEmail");
       const password = document.getElementById("loginPassword");
-      let isValid = true;
+
+      let valid = true;
 
       if (!validateEmail(email.value)) {
         showError(email, "Enter a valid email.");
-        isValid = false;
+        valid = false;
       } else {
         showSuccess(email);
       }
 
       if (password.value.length < 6) {
         showError(password, "Password must be at least 6 characters.");
-        isValid = false;
+        valid = false;
       } else {
         showSuccess(password);
       }
 
-      if (isValid) {
+      if (valid) {
         alert("Login successful!");
         window.location.href = "profile.html";
       }
@@ -58,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* ---------------------------
-     SIGNUP VALIDATION
+     SIGNUP FORM
   ----------------------------*/
 
   const signupForm = document.getElementById("signupForm");
@@ -72,37 +73,37 @@ document.addEventListener("DOMContentLoaded", function () {
       const password = document.getElementById("signupPassword");
       const confirm = document.getElementById("confirmPassword");
 
-      let isValid = true;
+      let valid = true;
 
       if (name.value.trim().length < 3) {
-        showError(name, "Full name must be at least 3 characters.");
-        isValid = false;
+        showError(name, "Name must be at least 3 characters.");
+        valid = false;
       } else {
         showSuccess(name);
       }
 
       if (!validateEmail(email.value)) {
-        showError(email, "Enter a valid email address.");
-        isValid = false;
+        showError(email, "Enter a valid email.");
+        valid = false;
       } else {
         showSuccess(email);
       }
 
       if (password.value.length < 6) {
         showError(password, "Password must be at least 6 characters.");
-        isValid = false;
+        valid = false;
       } else {
         showSuccess(password);
       }
 
       if (confirm.value !== password.value || confirm.value === "") {
         showError(confirm, "Passwords do not match.");
-        isValid = false;
+        valid = false;
       } else {
         showSuccess(confirm);
       }
 
-      if (isValid) {
+      if (valid) {
         alert("Account created successfully!");
         window.location.href = "login.html";
       }
@@ -110,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* ---------------------------
-     SETTINGS VALIDATION
+     SETTINGS FORM
   ----------------------------*/
 
   const settingsForm = document.getElementById("settingsForm");
@@ -123,37 +124,37 @@ document.addEventListener("DOMContentLoaded", function () {
       const address = document.getElementById("settingsAddress");
       const password = document.getElementById("settingsPassword");
 
-      let isValid = true;
+      let valid = true;
 
-      if (email.value && !validateEmail(email.value)) {
+      if (email.value !== "" && !validateEmail(email.value)) {
         showError(email, "Enter a valid email.");
-        isValid = false;
-      } else if (email.value) {
+        valid = false;
+      } else if (email.value !== "") {
         showSuccess(email);
       }
 
       if (address.value.trim().length < 5) {
         showError(address, "Address must be at least 5 characters.");
-        isValid = false;
+        valid = false;
       } else {
         showSuccess(address);
       }
 
-      if (password.value && password.value.length < 6) {
+      if (password.value !== "" && password.value.length < 6) {
         showError(password, "Password must be at least 6 characters.");
-        isValid = false;
-      } else if (password.value) {
+        valid = false;
+      } else if (password.value !== "") {
         showSuccess(password);
       }
 
-      if (isValid) {
+      if (valid) {
         alert("Settings updated successfully!");
       }
     });
   }
 
   /* ---------------------------
-     NEWSLETTER VALIDATION
+     NEWSLETTER FORM
   ----------------------------*/
 
   const newsletterForm = document.getElementById("newsletterForm");
@@ -173,3 +174,70 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+/* ---------------------------
+   ADMIN - ADD USER FORM
+----------------------------*/
+
+const addUserForm = document.getElementById("addUserForm");
+
+if (addUserForm) {
+  addUserForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("userName");
+    const email = document.getElementById("userEmail");
+    const role = document.getElementById("userRole");
+
+    let valid = true;
+
+    /* Name Validation */
+    if (name.value.trim().length < 3) {
+      showError(name, "Name must be at least 3 characters.");
+      valid = false;
+    } else {
+      showSuccess(name);
+    }
+
+    /* Email Validation */
+    if (!validateEmail(email.value)) {
+      showError(email, "Enter a valid email.");
+      valid = false;
+    } else {
+      showSuccess(email);
+    }
+
+    /* Role Validation */
+    if (role.value === "") {
+      alert("Please select a role.");
+      valid = false;
+    }
+
+    /* If valid, add user to table */
+    if (valid) {
+      const table = document.getElementById("userTable");
+
+      const newRow = table.insertRow();
+
+      newRow.innerHTML = `
+        <td>${table.rows.length}</td>
+        <td>${name.value}</td>
+        <td>${email.value}</td>
+        <td>${role.value}</td>
+        <td><button onclick="deleteRow(this)">Delete</button></td>
+      `;
+
+      alert("User added successfully!");
+
+      addUserForm.reset();
+    }
+  });
+}
+
+/* ---------------------------
+   DELETE USER
+----------------------------*/
+
+function deleteRow(button) {
+  const row = button.parentNode.parentNode;
+  row.remove();
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="admin-layout">
+      <!-- Sidebar -->
+      <aside class="admin-sidebar">
+        <h2 class="brand">Admin Panel</h2>
+
+        <nav>
+          <ul>
+            <li><a href="admin.html">Dashboard</a></li>
+            <li><a href="manage-users.html">Manage Users</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="login.html">Logout</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="admin-content">
+        <h1>Dashboard</h1>
+        <p>Welcome Admin. Manage your system here.</p>
+
+        <div class="admin-cards">
+          <div class="admin-card">
+            <h3>Total Users</h3>
+            <p id="totalUsers">2</p>
+          </div>
+
+          <div class="admin-card">
+            <h3>System Status</h3>
+            <p>Online</p>
+          </div>
+
+          <div class="admin-card">
+            <h3>Admin Role</h3>
+            <p>Administrator</p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

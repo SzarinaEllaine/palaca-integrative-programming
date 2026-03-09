@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Settings – Monellaine</title>
 
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <script src="script.js"></script>
+
   <body>
     <header class="site-header">
       <a class="logo-link" href="profile.html">
@@ -29,10 +32,7 @@
       <section class="panel">
         <div class="container" style="max-width: 600px">
           <div class="card" style="padding: 2rem">
-            <div
-              class="panel-header"
-              style="text-align: center; margin-bottom: 2rem"
-            >
+            <div style="text-align: center; margin-bottom: 2rem">
               <h2 class="brand">Account Settings</h2>
               <p class="muted">Update your preferences and security details.</p>
             </div>
@@ -40,31 +40,14 @@
             <form class="auth-form" id="settingsForm">
               <div class="form-group">
                 <label>Change Email</label>
-                <input
-                  type="email"
-                  id="settingsEmail"
-                />placeholder="szarinagwapa@monellaine.com" />
-                <p
-                  class="small muted"
-                  style="font-size: 0.75rem; margin-top: 0.2rem"
-                >
-                  * Synchronized with external identity provider.
-                </p>
+                <input type="email" id="settingsEmail" />
+                <small class="error"></small>
               </div>
 
               <div class="form-group">
                 <label>Change Address</label>
-                <input
-                  type="text"
-                  id="settingsAddress"
-                  placeholder="Valencia, Bohol, Philippines"
-                />
-                <p
-                  class="small muted"
-                  style="font-size: 0.75rem; margin-top: 0.2rem"
-                >
-                  * Geographic data binding active.
-                </p>
+                <input type="text" id="settingsAddress" />
+                <small class="error"></small>
               </div>
 
               <div class="form-group">
@@ -72,19 +55,14 @@
                 <input
                   type="password"
                   id="settingsPassword"
-                  placeholder="New Password"
+                  placeholder="Leave blank to keep current password"
                 />
-                <p
-                  class="small muted"
-                  style="font-size: 0.75rem; margin-top: 0.2rem"
-                >
-                  * Argon2id hashing enabled.
-                </p>
+                <small class="error"></small>
               </div>
 
               <div class="form-group">
                 <label>Theme Preference</label>
-                <select class="form-select">
+                <select class="form-select" id="themeSelect">
                   <option value="light">Light (Cream & Gold)</option>
                   <option value="dark">Dark (Coffee & Bronze)</option>
                 </select>
@@ -100,5 +78,6 @@
         </div>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
