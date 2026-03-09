@@ -1,8 +1,35 @@
-document.addEventListener("DOMContentLoaded", function () {
-  /* ---------------------------
-     Utility Functions
-  ----------------------------*/
+/* ---------------------------
+   ADMIN ACCESS VALIDATION
+----------------------------*/
 
+// Simulated logged-in user object (replace with real session/server data)
+const currentUser = {
+  username: "szarinagwapa",
+  role: "admin", // "admin" or "user"
+  loggedIn: true,
+};
+
+// Protect admin pages
+function protectAdminPage() {
+  const adminPages = ["admin.html", "manage-users.html"]; // add other admin pages here
+  const currentPage = window.location.pathname.split("/").pop();
+
+  if (adminPages.includes(currentPage)) {
+    if (!currentUser.loggedIn || currentUser.role !== "admin") {
+      alert("Access denied! Admins only.");
+      window.location.href = "login.html"; // redirect non-admins
+    }
+  }
+}
+
+// Call admin protection immediately
+protectAdminPage();
+
+/* ---------------------------
+   DOM CONTENT LOADED
+----------------------------*/
+
+document.addEventListener("DOMContentLoaded", function () {
   function showError(input, message) {
     const error = input.nextElementSibling;
     input.classList.remove("valid");
@@ -52,8 +79,17 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       if (valid) {
-        alert("Login successful!");
-        window.location.href = "profile.html";
+        // Update currentUser object after login (replace with real server logic)
+        currentUser.loggedIn = true;
+        // For demo: assign role based on email (in real app, get from server)
+        currentUser.role = email.value === "admin@email.com" ? "admin" : "user";
+
+        // Redirect based on role
+        if (currentUser.role === "admin") {
+          window.location.href = "admin.html";
+        } else {
+          window.location.href = "profile.html";
+        }
       }
     });
   }
@@ -174,6 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
 /* ---------------------------
    ADMIN - ADD USER FORM
 ----------------------------*/
