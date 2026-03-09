@@ -169,4 +169,55 @@ all code was reviewed and modified by me.
 
 🔹 Learning Reflection
 
+
 In this activity, I've learned how to validate using javascript. The most challenging part would be the javascript form validation logic. Because, I must prevent default form submission, validate multiple inputs differently (email, password, confirm password), display error messages dynamically, add/remove CSS classes (valid / invalid), and ensure validation only runs if the form exists.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Activity 5 March 9, 2026 (Create admin pages)
+
+🔹 Technologies Used Example:
+
+1.HTML5 – for page structure.
+
+2.CSS3 – for styling, including gradients, glassmorphism, and responsive design.
+
+3.JavaScript – for interactive features like form validation and table updates.
+
+4.Google Fonts – “Inter” for clean text and “Dancing Script” for branding.
+
+🔹 Navigation Flow:
+
+1.Home / Landing Page – Users see hero section, menu cards, and call-to-action buttons.
+
+2.Login / Signup Page – Users can authenticate using the auth box.
+
+3.Dashboard (Admin Only) – Admin can view total users, system status, and manage profiles.
+
+4.Manage Users – Admin can add new users and see a dynamic user table.
+
+5.Profile Page – Users can update their information in a profile card layout.
+
+🔹 Features List at least 3 features of your landing page.
+
+1.Glassmorphic UI Design – Smooth translucent panels with blur effects for a modern look.
+
+2.Responsive Layout – Works on desktop, tablet, and mobile, with grid and flex adjustments.
+
+3.Admin Management – Add, view, and delete users through a user-friendly admin panel.
+
+4.Interactive Buttons – Gradient hover effects and animated shine on primary buttons.
+
+5.Futuristic Background – Subtle animated radial gradients for an engaging landing page aesthetic
+
+🔹 AI Assistance Disclosure
+
+Yes, I used ChatGPT to assist me in areas I lack knowledge of. However,
+all code was reviewed and modified by me.
+
+🔹 Learning Reflection
+
+- learned how to implement glassmorphism with CSS variables and backdrop filters.
+- Gained experience in responsive grid and flex layouts for dashboards and landing pages.
+- Improved skills in form validation and dynamic table updates with JavaScript.
+- Understood the importance of clear project structure and reusable CSS for consistent design.
+- Appreciated how AI assistance can speed up debugging while maintaining design integrity.
