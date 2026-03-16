@@ -228,7 +228,7 @@ all code was reviewed and modified by me.
 
 🔹Name of your API-integrated web app
 - Monellaine Pâtisserie: Dessert Search API
-- 
+  
 🔹Description
 - This web application is a digital recipe finder integrated into a bakery's website. It allows users to quickly search for specific desserts or baked goods and dynamically generates visual recipe cards featuring images, origins, and brief preparation instructions fetched from an external database.
   
