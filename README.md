@@ -222,6 +222,7 @@ all code was reviewed and modified by me.
 - Understood the importance of clear project structure and reusable CSS for consistent design.
 - Appreciated how AI assistance can speed up debugging while maintaining design integrity.
 
+<<<<<<< HEAD
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Activity 6 March 16, 2026 (Create API page)
 
@@ -326,6 +327,55 @@ AI tools were used to assist in improving the design, debugging code, and implem
 🔹 Learning Reflection
 
 Through this activity, I learned how to integrate an external API and display dynamic data on a webpage. I also understood how localStorage works to store and retrieve data, allowing information to persist even after refreshing the page. Additionally, I improved my skills in JavaScript, especially in handling arrays, preventing duplicates, and manipulating the DOM. This activity helped me understand how front-end applications can simulate database-like behavior using browser storage.
+=======
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Activity 6 March 16, 2026 (Create API page)
+🔹Project Title - Dessert search API
+
+🔹Name of your API-integrated web app
+- Monellaine Pâtisserie: Dessert Search API
+  
+🔹Description
+- This web application is a digital recipe finder integrated into a bakery's website. It allows users to quickly search for specific desserts or baked goods and dynamically generates visual recipe cards featuring images, origins, and brief preparation instructions fetched from an external database.
+  
+🔹API Used
+- TheMealDB API
+ This is a free, open-source recipe database. In this application, it provides the core data payload: meal names, high-quality image thumbnails, food categories, geographical origins, and text-based cooking instructions.
+
+🔹Features
+- Dynamic Search: Search for desserts using specific keywords (e.g., cake, tart, cookie).
+
+- Auto-Generated Recipe Cards: Displays search results in a clean, responsive grid layout with images and recipe details.
+
+- Text Truncation: Keeps the UI clean by limiting the instruction preview to the first 120 characters.
+
+- Input Validation: Alerts the user immediately if they try to search with an empty input field.
+
+- Graceful Error Handling: Displays user-friendly messages if no recipes are found or if the API connection fails.
+
+🔹How to Use
+- Open the web application in your browser.
+
+- Locate the search box labeled "Dessert Name".
+
+- Type the name of a dessert or a keyword into the input field.
+
+- Click the blue Search button.
+
+- Browse the generated cards below to see the recipe details and instructions.
+
+🔹Challenges Encountered
+
+- Handling Asynchronous Data: Managing the JavaScript fetch promises to ensure the website doesn't freeze while waiting for the API to respond, and properly converting that response into usable JSON.
+
+- Dynamic DOM Manipulation: Safely creating new HTML elements (the recipe cards) on the fly and injecting the API data into them without causing layout shifts or formatting errors.
+
+- Edge Case Management: Writing the precise conditional logic needed to handle unexpected scenarios, such as the API returning a null value when a dessert isn't found in the database.
+
+
+
+
+>>>>>>> adbc5f628809b4f3a7741374ec46f59d4e926552
 
 
 
