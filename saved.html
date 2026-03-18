@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Saved Desserts</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        background: #fff7f9;
+        text-align: center;
+      }
+
+      h1 {
+        font-family: "Dancing Script", cursive;
+        font-size: 42px;
+        margin-top: 30px;
+        color: #d46a92;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        padding: 15px;
+        transition: transform 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .card h3 {
+        margin: 10px 0 5px;
+        color: #333;
+      }
+
+      .card p {
+        margin: 5px 0;
+        font-size: 14px;
+        color: #666;
+      }
+
+      .delete-btn {
+        margin-top: 10px;
+        padding: 8px 12px;
+        background: #ff6b81;
+        border: none;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .delete-btn:hover {
+        background: #e55065;
+      }
+
+      .empty {
+        margin-top: 40px;
+        font-size: 18px;
+        color: #888;
+      }
+
+      .back-link {
+        display: inline-block;
+        margin-top: 10px;
+        text-decoration: none;
+        color: #d46a92;
+        font-weight: 500;
+      }
+
+      .back-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>🍰 Saved Desserts</h1>
+    <a href="api.html" class="back-link">← Back to Search</a>
+
+    <div class="container">
+      <div id="savedContainer" class="grid"></div>
+    </div>
+
+    <script>
+      function displaySavedMeals() {
+        const container = document.getElementById("savedContainer");
+        let savedMeals = JSON.parse(localStorage.getItem("savedMeals")) || [];
+
+        if (savedMeals.length === 0) {
+          container.innerHTML = "<p class='empty'>No saved items yet 🍩</p>";
+          return;
+        }
+
+        savedMeals.forEach((meal, index) => {
+          const card = document.createElement("div");
+          card.classList.add("card");
+
+          card.innerHTML = `
+            <img src="${meal.image}">
+            <h3>${meal.name}</h3>
+            <p><strong>Category:</strong> ${meal.category}</p>
+            <p><strong>Origin:</strong> ${meal.area}</p>
+
+            <button class="delete-btn" onclick="deleteMeal(${index})">
+              Delete
+            </button>
+          `;
+
+          container.appendChild(card);
+        });
+      }
+
+      function deleteMeal(index) {
+        let savedMeals = JSON.parse(localStorage.getItem("savedMeals")) || [];
+
+        savedMeals.splice(index, 1);
+
+        localStorage.setItem("savedMeals", JSON.stringify(savedMeals));
+
+        location.reload();
+      }
+
+      displaySavedMeals();
+    </script>
+  </body>
+</html>
