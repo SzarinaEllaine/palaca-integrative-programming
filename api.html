@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -15,7 +14,8 @@
     <style>
       body {
         font-family: "Inter", sans-serif;
-        background: #fff7f9;
+        background: linear-gradient(135deg, #fff1f5, #ffe4ec);
+        margin: 0;
       }
 
       .api-section {
@@ -25,118 +25,182 @@
 
       .brand {
         font-family: "Dancing Script", cursive;
-        font-size: 42px;
+        font-size: 48px;
         color: #d46a92;
+        margin-bottom: 10px;
       }
 
       .muted {
         color: #777;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
       }
 
+      /* SEARCH BOX */
       .api-box {
         margin-top: 20px;
         display: flex;
         justify-content: center;
-        gap: 10px;
+        gap: 12px;
         flex-wrap: wrap;
       }
 
       .api-box input {
-        padding: 12px;
+        padding: 14px;
         width: 260px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        outline: none;
-        transition: 0.2s;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        background: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
       }
 
       .api-box input:focus {
         border-color: #ff9bb3;
-        box-shadow: 0 0 5px rgba(255, 155, 179, 0.5);
+        box-shadow: 0 0 10px rgba(255, 155, 179, 0.5);
+        transform: scale(1.03);
       }
 
       .btn-primary {
-        padding: 12px 16px;
+        padding: 14px 18px;
         background: linear-gradient(135deg, #ff9bb3, #ff6f91);
         border: none;
         color: white;
-        border-radius: 8px;
+        border-radius: 12px;
         cursor: pointer;
-        font-weight: 500;
-        transition: 0.2s;
+        font-weight: 600;
+        box-shadow: 0 6px 15px rgba(255, 111, 145, 0.3);
+        transition: all 0.3s ease;
       }
 
       .btn-primary:hover {
-        transform: scale(1.05);
-        opacity: 0.9;
+        transform: translateY(-2px) scale(1.05);
+        box-shadow: 0 10px 20px rgba(255, 111, 145, 0.4);
       }
 
+      /* CATEGORY BUTTONS */
+      .categories {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .category-btn {
+        padding: 10px 16px;
+        border-radius: 25px;
+        border: none;
+        background: white;
+        cursor: pointer;
+        font-size: 14px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        transition: all 0.25s ease;
+      }
+
+      .category-btn:hover {
+        background: #ff9bb3;
+        color: white;
+        transform: translateY(-3px) scale(1.05);
+      }
+
+      /* RESULTS GRID */
       .api-results {
-        margin-top: 40px;
+        margin-top: 50px;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 25px;
+        gap: 30px;
+        padding: 0 10px;
       }
 
+      /* CARD DESIGN */
       .api-card {
-        background: white;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        border-radius: 18px;
         padding: 18px;
-        border-radius: 14px;
-        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-        transition:
-          transform 0.2s ease,
-          box-shadow 0.2s;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s ease;
+      }
+
+      .api-card.show {
+        opacity: 1;
+        transform: translateY(0);
       }
 
       .api-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 22px rgba(0, 0, 0, 0.12);
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
       }
 
       .api-card img {
         width: 100%;
         height: 180px;
         object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 10px;
+        border-radius: 12px;
+        margin-bottom: 12px;
+        transition: transform 0.3s ease;
+      }
+
+      .api-card:hover img {
+        transform: scale(1.05);
       }
 
       .api-card h3 {
         margin: 10px 0 5px;
+        font-size: 18px;
         color: #333;
       }
 
       .api-card p {
         font-size: 14px;
         color: #666;
-        margin: 5px 0;
       }
 
+      .api-card-content {
+        flex-grow: 1;
+      }
+
+      /* SAVE BUTTON */
       .save-btn {
-        margin-top: 10px;
-        padding: 8px 12px;
-        background: #ffd1dc;
-        border: none;
+        margin-top: 12px;
+        padding: 8px 14px;
         border-radius: 20px;
+        border: none;
+        background: linear-gradient(135deg, #ffd1dc, #ff9bb3);
         cursor: pointer;
-        font-size: 14px;
-        transition: 0.2s;
+        transition: all 0.3s ease;
       }
 
       .save-btn:hover {
-        background: #ff9bb3;
+        background: #ff6f91;
         color: white;
+        transform: scale(1.1) rotate(-1deg);
       }
 
+      /* MESSAGE */
       .message {
         margin-top: 20px;
         font-weight: 500;
         color: #d46a92;
+        animation: fadeIn 0.5s ease;
       }
 
-      .site-nav a:hover {
-        color: #ff6f91;
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     </style>
   </head>
@@ -144,17 +208,12 @@
   <body>
     <header class="site-header">
       <a class="logo-link" href="index.html">
-        <img src="assets/monellaine.png" alt="logo" class="site-logo" />
+        <img src="assets/monellaine.png" class="site-logo" />
       </a>
-
-      <nav class="site-nav">
+      <nav class="site-nav" aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#menu">Menu</a></li>
-          <li><a href="api.html">API</a></li>
-          <li><a href="saved.html">Saved</a></li>
-          <li><a href="logout.html">Logout</a></li>
+          <li><a href="Saved.html">Saved</a></li>
         </ul>
       </nav>
     </header>
@@ -162,22 +221,34 @@
     <main>
       <section class="api-section">
         <h1 class="brand">🍰 Dessert Search API</h1>
-
         <p class="muted">
           Discover delicious desserts and save your favorites!
         </p>
 
-        <label for="dessertInput"><strong>Dessert Name:</strong></label>
-
         <div class="api-box">
-          <input
-            type="text"
-            id="dessertInput"
-            placeholder="Example: cake, tart, cookie"
-          />
+          <input id="dessertInput" placeholder="cake, tart, cookie" />
+          <button class="btn-primary" onclick="searchDessert()">Search</button>
+        </div>
 
-          <button class="btn btn-primary" onclick="searchDessert()">
-            Search
+        <!-- CATEGORY BUTTONS -->
+        <div class="categories">
+          <button class="category-btn" onclick="searchCategory('cake')">
+            Cake
+          </button>
+          <button class="category-btn" onclick="searchCategory('pie')">
+            Pie
+          </button>
+          <button class="category-btn" onclick="searchCategory('cookie')">
+            Cookie
+          </button>
+          <button class="category-btn" onclick="searchCategory('tart')">
+            Tart
+          </button>
+          <button class="category-btn" onclick="searchCategory('pudding')">
+            Pudding
+          </button>
+          <button class="category-btn" onclick="searchCategory('ice cream')">
+            Ice Cream
           </button>
         </div>
 
@@ -187,6 +258,11 @@
     </main>
 
     <script>
+      function searchCategory(category) {
+        document.getElementById("dessertInput").value = category;
+        searchDessert();
+      }
+
       function searchDessert() {
         const query = document.getElementById("dessertInput").value.trim();
         const resultsContainer = document.getElementById("apiResults");
@@ -195,71 +271,74 @@
         resultsContainer.innerHTML = "";
         message.textContent = "";
 
-        if (query === "") {
+        if (!query) {
           message.textContent = "Please enter a dessert name.";
           return;
         }
 
-        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`)
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("API request failed.");
-            }
-            return response.json();
-          })
+        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert`)
+          .then((res) => res.json())
           .then((data) => {
-            if (!data.meals) {
-              message.textContent = "No desserts found for your search.";
+            const filtered = data.meals.filter((meal) =>
+              meal.strMeal.toLowerCase().includes(query.toLowerCase()),
+            );
+
+            if (filtered.length === 0) {
+              message.textContent = "No matching desserts found.";
               return;
             }
 
-            data.meals.forEach((meal) => {
-              const card = document.createElement("div");
-              card.classList.add("api-card");
+            filtered.forEach((meal, index) => {
+              fetch(
+                `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${meal.idMeal}`,
+              )
+                .then((res) => res.json())
+                .then((detail) => {
+                  const item = detail.meals[0];
 
-              card.innerHTML = `
-                <h3>${meal.strMeal}</h3>
-                <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
-                <p><strong>Category:</strong> ${meal.strCategory}</p>
-                <p><strong>Origin:</strong> ${meal.strArea}</p>
-                <p>${meal.strInstructions.substring(0, 120)}...</p>
+                  const card = document.createElement("div");
+                  card.classList.add("api-card");
 
-                <button class="save-btn" onclick='saveMeal(${JSON.stringify(meal)})'>
-                  💾 Save
-                </button>
-              `;
+                  card.innerHTML = `
+                    <div class="api-card-content">
+                      <h3>${item.strMeal}</h3>
+                      <img src="${item.strMealThumb}">
+                      <p><strong>Category:</strong> ${item.strCategory}</p>
+                      <p><strong>Origin:</strong> ${item.strArea}</p>
+                    </div>
+                    <button class="save-btn" onclick='saveMeal(${JSON.stringify(item)})'>
+                      💾 Save
+                    </button>
+                  `;
 
-              resultsContainer.appendChild(card);
+                  resultsContainer.appendChild(card);
+
+                  // Add fade-in animation with stagger
+                  setTimeout(() => card.classList.add("show"), index * 100);
+                });
             });
           })
-          .catch((error) => {
-            message.textContent =
-              "Failed to retrieve data from the API. Please try again.";
-            console.error(error);
+          .catch(() => {
+            message.textContent = "Error loading data.";
           });
       }
 
       function saveMeal(meal) {
         let savedMeals = JSON.parse(localStorage.getItem("savedMeals")) || [];
 
-        const exists = savedMeals.some((item) => item.name === meal.strMeal);
-
-        if (exists) {
+        if (savedMeals.some((m) => m.name === meal.strMeal)) {
           alert("Already saved!");
           return;
         }
 
-        const mealData = {
+        savedMeals.push({
           name: meal.strMeal,
           category: meal.strCategory,
           image: meal.strMealThumb,
           area: meal.strArea,
-        };
-
-        savedMeals.push(mealData);
+        });
 
         localStorage.setItem("savedMeals", JSON.stringify(savedMeals));
-
         alert("Saved successfully!");
       }
     </script>

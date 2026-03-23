@@ -121,28 +121,28 @@ In this activity, I've learned how to create profile and settings pages. The mos
 🔹 Navigation Flow:
 
 1. Landing Page (index.html)
-→ Users can view About section and Menu highlights
-→ Can navigate to Login or Sign Up
+   → Users can view About section and Menu highlights
+   → Can navigate to Login or Sign Up
 
 2. Sign Up Page (signup.html)
-→ Users create an account (with validation)
-→ Redirects to Login after successful registration
+   → Users create an account (with validation)
+   → Redirects to Login after successful registration
 
 3. Login Page (login.html)
-→ Users enter credentials (validated via JavaScript)
-→ Redirects to Profile page upon successful login
+   → Users enter credentials (validated via JavaScript)
+   → Redirects to Profile page upon successful login
 
 4. Profile Page (profile.html)
-→ Displays user information
-→ Users can access Settings or Logout
+   → Displays user information
+   → Users can access Settings or Logout
 
 5. Settings Page (settings.html)
-→ Users update email, address, password, and theme preference
-→ Validations ensure proper input before saving
-→ Return to Profile
+   → Users update email, address, password, and theme preference
+   → Validations ensure proper input before saving
+   → Return to Profile
 
 6. Logout
-→ Redirects user back to Login page
+   → Redirects user back to Login page
 
 🔹 Features List at least 3 features of your landing page.
 
@@ -169,10 +169,10 @@ all code was reviewed and modified by me.
 
 🔹 Learning Reflection
 
-
 In this activity, I've learned how to validate using javascript. The most challenging part would be the javascript form validation logic. Because, I must prevent default form submission, validate multiple inputs differently (email, password, confirm password), display error messages dynamically, add/remove CSS classes (valid / invalid), and ensure validation only runs if the form exists.
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
+
 # Activity 5 March 9, 2026 (Create admin pages)
 
 🔹 Technologies Used Example:
@@ -221,7 +221,9 @@ all code was reviewed and modified by me.
 - Improved skills in form validation and dynamic table updates with JavaScript.
 - Understood the importance of clear project structure and reusable CSS for consistent design.
 - Appreciated how AI assistance can speed up debugging while maintaining design integrity.
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---
+
 # Activity 6 March 16, 2026 (Create API page)
 
 🔹Project Title - Dessert search API
@@ -270,7 +272,7 @@ Dynamic DOM Manipulation: Safely creating new HTML elements (the recipe cards) o
 
 Edge Case Management: Writing the precise conditional logic needed to handle unexpected scenarios, such as the API returning a null value when a dessert isn't found in the database.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 # Activity 7 March 18, 2026 ( Add Save Feature (Using localStorage) )
 
@@ -329,8 +331,26 @@ AI tools were used to assist in improving the design, debugging code, and implem
 
 Through this activity, I learned how to integrate an external API and display dynamic data on a webpage. I also understood how localStorage works to store and retrieve data, allowing information to persist even after refreshing the page. Additionally, I improved my skills in JavaScript, especially in handling arrays, preventing duplicates, and manipulating the DOM. This activity helped me understand how front-end applications can simulate database-like behavior using browser storage.
 
+---
 
+# Activity 8 March 23, 2026 ( API Refinement Activity )
 
+🔹 Project Purpose
 
+- My website is all about a bakery and a dessert discovery website that allows users to search desserts and view their name, category, and country of origin, then save their favorites.
 
+🔹 API Used
 
+- MealDB API
+  TheMealDB API provides structured dessert data such as name, category, and origin, which directly supports the website’s purpose. TheMealDB is chosen because it is free, structured, dessert-friendly, fast, and rich in images and metadata, making it perfect for building an interactive dessert search app.
+
+🔹 Why does this API belong in your website?
+
+- TheMealDB API is ideal for this website because it offers a comprehensive collection of desserts with structured data and images, allowing users to search, filter by category, and display detailed dessert information in an interactive UI.
+
+🔹Integration
+
+- The API is integrated into the website to:
+  1. Search desserts by name or select a dessert category (cake, pie, cookie, etc.).
+  2. Display results in cards showing the dessert’s name, image, category, and origin.
+  3. Provide a save button to store favorite desserts in local storage.
